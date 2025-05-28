@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #e7e7e7;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+.navigation .logo a {
+    text-decoration: none;
+    font-size: 35px;
+    color: coral;
+    letter-spacing: 4px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    list-style: none;
+}
+.menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+}
+.menu li a:hover {
+    color: coral;
+}
+.calltoaction {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+}
+.calltoaction .right {
+    width:40%;
+    /* background: red; */
+}
+.calltoaction .right h1 {
+    font-size: 75px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+}
+.calltoaction .right h1 span {
+    color: coral;
+}
+.calltoaction .right .description {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.808);
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin-bottom: 30px;
+}
+.calltoaction .right a {
+    background: none;
+    color: coral;
+    border: 1px solid coral;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.calltoaction .right a.active {
+    background: coral;
+    color: #fff;
+}
+.calltoaction .right a:hover {
+    background: coral;
+    color: #fff;
+}
+.calltoaction .left {
+    perspective: 1200px;
+    width: 30%;
+}
+.calltoaction .left img {
+    height: 400px;
+    width: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    transform: rotateY(20deg);
+}
+
+/*career so far*/
+.skills {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.skills .left {
+    width: 40%;
+}
+.skills .left h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.skills .left h1 span {
+    color: coral;
+}
+.skills .left .description {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.808);
+    letter-spacing: .5px;
+    word-spacing: .5px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 35px;
+}
+.skills .right {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills .right .box{
+    border: 1px solid black;
+    padding: 6px 10px;
+    margin: 7px;
+    border-radius: 3px;
+}
+
+.projects {
+    background-image: url(../images/career3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5% 0;
+    position: relative;
+}
+.projects .overlay {
+    background: rgba(0, 0, 0, 0.795);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.projects .title {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+.projects .title h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(240, 240, 240);
+}
+.projects .title h1 span {
+    color: coral;
+}
+.projects .cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+.projects .cards .card {
+    width: 20%;
+    height: 200px;   
+}
+.projects .cards .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.projects .button {
+    z-index: 1;
+}
+.projects .button a {
+    background: none;
+    color: coral;
+    border: 1px solid coral;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.projects .button a:hover {
+    background: coral;
+    color: #fff;
+}
+
+.projects .cards .card p {
+    color: white;
+}
+
+
+/* ----------------- Updated Contact CSS ----------------- */
+
+.contact {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Add this to reset form default styles */
+.contact .left form {
+    all: unset;       /* remove browser default */
+    display: block;   /* behave like block */
+    width: 100%;
+}
+
+.contact .left {
+    width: 30%;
+}
+
+.contact .left .input {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix input and textarea selectors */
+.contact .left .input input,
+.contact .left .input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+    outline: none;
+    font-size: 17px;
+    background: rgba(236, 236, 236, 0.918);
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.contact .left .input span {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.808);
+    letter-spacing: .5px;
+    word-spacing: .5px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+/* Style button inside form */
+.contact .left form button {
+    background: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.contact .left form button:active {
+    background: black;
+    color: #fff;
+}
+
+.contact .right {
+    width: 40%;
+}
+.contact .right h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+}
+.contact .right h1 span {
+    color: coral;
+}
+
+.footer {
+    padding: 20px 0;
+    background: coral;
+    /* border-top: 1px solid black; */
+}
+.footer p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+}
+.footer p span {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
