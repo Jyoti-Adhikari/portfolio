@@ -63,7 +63,16 @@ body {
     letter-spacing: 1px;
     word-spacing: 1px;
     margin-bottom: 30px;
+    font-weight: 400;
+    text-align: justify;
+   
 }
+.calltoaction .right .description {
+ 
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
 .calltoaction .right a {
     background: none;
     color: coral;
