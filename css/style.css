@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,144 +7,228 @@
 
 body {
     background: #e7e7e7;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* Navigation - Enhanced */
 .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 25px;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
+
 .navigation .logo a {
     text-decoration: none;
-    font-size: 35px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     color: coral;
-    letter-spacing: 4px;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 2px;
+    font-weight: 700;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .menu {
     display: flex;
     justify-content: space-between;
-    width: 15%;
+    width: clamp(150px, 15%, 200px);
     list-style: none;
+    gap: 2rem;
 }
+
 .menu li a {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
+
 .menu li a:hover {
     color: coral;
+    background: rgba(255, 127, 80, 0.1);
 }
+
+/* Call to Action Section - Enhanced */
 .calltoaction {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 90vh;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 3rem;
 }
+
+.calltoaction .left {
+    perspective: 1200px;
+    width: clamp(300px, 35%, 450px);
+    flex-shrink: 0;
+}
+
+.calltoaction .left img {
+    height: clamp(350px, 45vh, 450px);
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    transform: rotateY(15deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+}
+
+.calltoaction .left img:hover {
+    transform: rotateY(0deg) scale(1.02);
+}
+
 .calltoaction .right {
-    width:40%;
-    /* background: red; */
+    width: clamp(400px, 50%, 600px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
 }
+
 .calltoaction .right h1 {
-    font-size: 75px;
-    font-weight: 600;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
     color: rgb(34, 34, 34);
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
+
 .calltoaction .right h1 span {
     color: coral;
 }
+
 .calltoaction .right .description {
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.808);
-    letter-spacing: 1px;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.5px;
     word-spacing: 1px;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     font-weight: 400;
+    line-height: 1.7;
     text-align: justify;
-   
 }
-.calltoaction .right .description {
- 
-  line-height: 1.6;
-  margin: 20px 0;
+
+.calltoaction .right .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .calltoaction .right a {
     background: none;
     color: coral;
-    border: 1px solid coral;
-    border-radius: 5px;
-    font-size: 20px;
+    border: 2px solid coral;
+    border-radius: 8px;
+    font-size: clamp(1rem, 2vw, 1.125rem);
     text-decoration: none;
-    padding: 8px 20px;
+    padding: 1rem 2rem;
     cursor: pointer;
-    transition: all .5s;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
 }
+
 .calltoaction .right a.active {
     background: coral;
     color: #fff;
-}
-.calltoaction .right a:hover {
-    background: coral;
-    color: #fff;
-}
-.calltoaction .left {
-    perspective: 1200px;
-    width: 30%;
-}
-.calltoaction .left img {
-    height: 400px;
-    width: 450px;
-    border-radius: 10px;
-    object-fit: cover;
-    transform: rotateY(20deg);
+    box-shadow: 0 10px 25px rgba(255, 127, 80, 0.3);
 }
 
-/*career so far*/
+.calltoaction .right a:hover:not(.active) {
+    background: coral;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 127, 80, 0.3);
+}
+
+/* Skills Section - Enhanced */
 .skills {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 3rem;
 }
+
 .skills .left {
-    width: 40%;
+    width: clamp(350px, 45%, 600px);
+    flex-shrink: 0;
 }
+
 .skills .left h1 {
-    font-size: 60px;
-    font-weight: 600;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
     color: rgb(34, 34, 34);
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
 }
+
 .skills .left h1 span {
     color: coral;
 }
+
 .skills .left .description {
-    font-size: 1.3rem;
-    color: rgba(0, 0, 0, 0.808);
-    letter-spacing: .5px;
-    word-spacing: .5px;
-    margin-bottom: 30px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+    margin-bottom: 2rem;
     font-weight: 400;
-    line-height: 35px;
-}
-.skills .right {
-    width: 30%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.skills .right .box{
-    border: 1px solid black;
-    padding: 6px 10px;
-    margin: 7px;
-    border-radius: 3px;
+    line-height: 1.8;
+    text-align: justify;
 }
 
+.skills .right {
+    width: clamp(300px, 40%, 500px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.skills .right .box {
+    border: 2px solid rgba(255, 127, 80, 0.3);
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    background: rgba(255, 127, 80, 0.05);
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skills .right .box:hover {
+    background: coral;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 127, 80, 0.3);
+}
+
+/* Projects Section - Enhanced (Already provided) */
 .projects {
     background-image: url(../images/career3.jpg);
     background-size: cover;
@@ -156,7 +240,9 @@ body {
     align-items: center;
     padding: 5% 0;
     position: relative;
+    min-height: 100vh;
 }
+
 .projects .overlay {
     background: rgba(0, 0, 0, 0.795);
     position: absolute;
@@ -164,154 +250,421 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: 0;
 }
+
 .projects .title {
     width: 100%;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
+    position: relative;
+    padding: 0 2rem;
 }
+
 .projects .title h1 {
-    font-size: 50px;
-    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
     color: rgb(240, 240, 240);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 .projects .title h1 span {
     color: coral;
 }
+
 .projects .cards {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    z-index: 1;
-    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    z-index: 2;
+    position: relative;
+    padding: 0 1rem;
 }
+
 .projects .cards .card {
-    width: 20%;
-    height: 200px;   
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.projects .cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.projects .cards .card a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
 .projects .cards .card img {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
+    height: 70%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
-.projects .button {
-    z-index: 1;
-}
-.projects .button a {
-    background: none;
-    color: coral;
-    border: 1px solid coral;
-    border-radius: 5px;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    transition: all .5s;
-}
-.projects .button a:hover {
-    background: coral;
-    color: #fff;
+
+.projects .cards .card:hover img {
+    transform: scale(1.05);
 }
 
 .projects .cards .card p {
     color: white;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.7);
+    height: 30%;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
 }
 
+.projects .button {
+    z-index: 2;
+    position: relative;
+    margin: 2rem 0;
+}
 
-/* ----------------- Updated Contact CSS ----------------- */
+.projects .button a {
+    background: none;
+    color: coral;
+    border: 2px solid coral;
+    border-radius: 8px;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
 
+.projects .button a:hover {
+    background: coral;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 127, 80, 0.3);
+}
+
+/* Contact Section - Enhanced */
 .contact {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-/* Add this to reset form default styles */
-.contact .left form {
-    all: unset;       /* remove browser default */
-    display: block;   /* behave like block */
-    width: 100%;
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 3rem;
 }
 
 .contact .left {
-    width: 30%;
+    width: clamp(350px, 40%, 500px);
+    flex-shrink: 0;
+}
+
+.contact .left form {
+    all: unset;
+    display: block;
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .contact .left .input {
     display: flex;
     flex-direction: column;
-}
-
-/* Fix input and textarea selectors */
-.contact .left .input input,
-.contact .left .input textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    resize: none;
-    outline: none;
-    font-size: 17px;
-    background: rgba(236, 236, 236, 0.918);
-    font-family: inherit;
-    box-sizing: border-box;
+    margin-bottom: 1.5rem;
 }
 
 .contact .left .input span {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.808);
-    letter-spacing: .5px;
-    word-spacing: .5px;
-    font-weight: 400;
-    line-height: 35px;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
-/* Style button inside form */
+.contact .left .input input,
+.contact .left .input textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    outline: none;
+    font-size: 1rem;
+    background: #f8f9fa;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.contact .left .input input:focus,
+.contact .left .input textarea:focus {
+    border-color: coral;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.1);
+}
+
+.contact .left .input textarea {
+    min-height: 120px;
+}
+
 .contact .left form button {
-    background: none;
-    color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 8px 20px;
+    background: coral;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.contact .left form button:active {
-    background: black;
-    color: #fff;
+.contact .left form button:hover {
+    background: #ff6b35;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 127, 80, 0.3);
 }
 
 .contact .right {
-    width: 40%;
+    width: clamp(400px, 50%, 600px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
 }
+
 .contact .right h1 {
-    font-size: 60px;
-    font-weight: 600;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
     color: rgb(34, 34, 34);
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
+
 .contact .right h1 span {
     color: coral;
 }
 
+.contact .right p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.8;
+}
+
+.contact .right a {
+    color: coral;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 127, 80, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.contact .right a:hover {
+    border-bottom-color: coral;
+    color: #ff6b35;
+}
+
+/* Footer - Enhanced */
 .footer {
-    padding: 20px 0;
-    background: coral;
-    /* border-top: 1px solid black; */
-}
-.footer p {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, coral, #ff6b35);
+    color: white;
     text-align: center;
-    font-size: 18px;
-    font-weight: 300;
+    position: relative;
+    overflow: hidden;
 }
-.footer p span {
-    color: rgb(255, 255, 255);
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-weight: 400;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
+}
+
+.footer p span {
+    color: white;
+    font-weight: 600;
+}
+
+.footer p:last-child {
+    margin-top: 1rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .calltoaction {
+        flex-direction: column;
+        height: auto;
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+    
+    .skills {
+        flex-direction: column;
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+    
+    .skills .right {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .contact {
+        flex-direction: column;
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+    
+    .contact .right {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .menu {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .calltoaction .right .cta-buttons {
+        justify-content: center;
+    }
+    
+    .skills .right {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 0.75rem;
+    }
+    
+    .skills .right .box {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .projects .cards {
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 1.5rem;
+    }
+    
+    .projects .cards .card {
+        height: 180px;
+    }
+    
+    .contact .left form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation .logo a {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .calltoaction {
+        padding: 2rem 0.5rem;
+    }
+    
+    .calltoaction .right h1 {
+        font-size: 2.5rem;
+    }
+    
+    .skills {
+        padding: 2rem 0.5rem;
+    }
+    
+    .skills .left h1 {
+        font-size: 2.5rem;
+    }
+    
+    .projects .title h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .projects .cards .card {
+        height: 160px;
+    }
+    
+    .projects .cards .card p {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+    
+    .projects .button a {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .contact {
+        padding: 2rem 0.5rem;
+    }
+    
+    .contact .right h1 {
+        font-size: 2.5rem;
+    }
+    
+    .footer {
+        padding: 2rem 1rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .skills .right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .projects .cards {
+        width: 98%;
+        padding: 0 0.25rem;
+    }
 }

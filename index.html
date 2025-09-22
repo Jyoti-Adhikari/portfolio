@@ -64,26 +64,8 @@
       <div class="title">
         <h1>Projects <span>.</span></h1>
       </div>
-      <div class="cards">
-        <div class="card">
-          <img src="images/jobsansar.jpg" alt="JobSansar: AI Job Portal" />
-          <p>Job Sansar(Html + CSS + Flask + PostgreSQL) </p>
-        </div>
-        <div class="card">
-          <img src="images/wanderhub.jpg" alt="WanderHub Travel Platform" />
-          <p>WanderHub Travel Platform (MERN Stack)</p>
-        </div>
-        <div class="card">
-          <img src="images/e-commerce.jpg" alt="E-Commerce System" />
-          <p>E-Commerce System (PHP/MySQL)</p>
-        </div>
-        <div class="card">
-          <img src="images/tic-tac-toe.png" alt="Tic-Tac-Toe Game" />
-          <p>Tic-Tac-Toe Game (JavaScript)</p>
-        </div>
-        <!-- <div class="card">
-          <img src="images/four.png" alt="Other Project" />
-        </div> -->
+      <div class="cards" id="projects-grid">
+        <!-- Projects will be dynamically loaded here -->
       </div>
       <div class="button">
         <a href="projects.html">View More</a>
@@ -93,22 +75,22 @@
 
     <div class="contact" id="contact">
       <div class="left">
-  <form action="https://formsubmit.co/jyoadhikari1111@gmail.com" method="POST">
-    <div class="input">
-      <span>Fullname: *</span>
-      <input type="text" name="name" placeholder="Enter Fullname" required />
-    </div>
-    <div class="input">
-      <span>Email: *</span>
-      <input type="email" name="email" placeholder="example@email.com" required />
-    </div>
-    <div class="input">
-      <span>Message: *</span>
-      <textarea name="message" rows="10" placeholder="Enter Message" required></textarea>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-</div>
+        <form action="https://formsubmit.co/jyoadhikari1111@gmail.com" method="POST">
+          <div class="input">
+            <span>Fullname: *</span>
+            <input type="text" name="name" placeholder="Enter Fullname" required />
+          </div>
+          <div class="input">
+            <span>Email: *</span>
+            <input type="email" name="email" placeholder="example@email.com" required />
+          </div>
+          <div class="input">
+            <span>Message: *</span>
+            <textarea name="message" rows="10" placeholder="Enter Message" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
 
       <div class="right">
         <h1>
@@ -116,9 +98,9 @@
         </h1>
         <p>
           📧 <a href="mailto:jyoadhikari1111@gmail.com">jyoadhikari1111@gmail.com</a>
-<br />
+          <br />
           📞 <a href="tel:+9779862905795">+977 9862905795</a>
-<br />
+          <br />
           🌐<a href="https://www.linkedin.com/in/jyoti-adhikari-9ba91734b" target="_blank">LinkedIn</a> |
           <a href="https://github.com/Jyoti-Adhikari" target="_blank">GitHub</a>
         </p>
@@ -130,5 +112,15 @@
         &copy; 2025 <span>Jyoti Adhikari.</span> All rights reserved.
       </p>
     </div>
+
+    <!-- Load projects script -->
+    <script src="./js/projects.js"></script>
+    <script>
+      // Load first 4 projects for homepage
+      document.addEventListener('DOMContentLoaded', function() {
+        const featuredProjects = projects.slice(0, 4);
+        renderProjects('projects-grid', featuredProjects);
+      });
+    </script>
   </body>
 </html>

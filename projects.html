@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jyoti Adhikari | Portfolio</title>
+    <title>Jyoti Adhikari | Projects</title>
     <link rel="stylesheet" href="./css/projects.css" />
   </head>
   <body>
@@ -11,7 +11,7 @@
       </div>
       <ul class="menu">
         <li><a href="index.html">About</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="projects.html">Projects</a></li>
       </ul>
     </div>
 
@@ -19,42 +19,14 @@
       <div class="title">
         <h1>Projects <span>.</span></h1>
         <p>
-          I'm a BSc.CSIT student and full-stack developer with a strong interest in data science. I focus on building clean, responsive, and functional applications using the MERN stack and PHP. Here are a few of my highlighted projects.
+          I'm a BSc.CSIT student and full-stack developer with a strong interest in data science. I focus on building clean, responsive, and functional applications using the MERN stack and PHP. Here are all my highlighted projects.
         </p>
+      </div>
+      <div class="cards" id="projects-grid">
+        <!-- All projects will be dynamically loaded here -->
       </div>
       <div class="overlay"></div>
     </div>
-
-    <div class="cards">
-  <div class="card">
-    <a href="https://github.com/Jyoti-Adhikari/Job_Sansar" target="_blank">
-      <img src="./images/jobsansar.jpg" alt="JobSansar: AI Job Portal" />
-      <p>Job Sansar (HTML + CSS + Flask + PostgreSQL)</p>
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="https://github.com/Jyoti-Adhikari/WanderHub" target="_blank">
-      <img src="./images/wanderhub.jpg" alt="WanderHub Travel Platform" />
-      <p>WanderHub Travel Platform (MERN Stack)</p>
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="https://github.com/Jyoti-Adhikari/simple-e-commerce-project" target="_blank">
-      <img src="./images/e-commerce.jpg" alt="E-Commerce System" />
-      <p>E-Commerce System (PHP/MySQL)</p>
-    </a>
-  </div>
-
-  <div class="card">
-    <a href="https://github.com/Jyoti-Adhikari/tic-tac-toe" target="_blank">
-      <img src="./images/tic-tac-toe.png" alt="Tic-Tac-Toe Game" />
-      <p>Tic-Tac-Toe Game (JavaScript)</p>
-    </a>
-  </div>
-</div>
-
 
     <div class="footer">
       <p>&copy; 2025 <span>Jyoti Adhikari.</span> All rights reserved.</p>
@@ -66,5 +38,14 @@
         <a href="https://github.com/Jyoti-Adhikari" target="_blank">GitHub</a>
       </p>
     </div>
+
+    <!-- Load projects script -->
+    <script src="./js/projects.js"></script>
+    <script>
+      // Load all projects for projects page
+      document.addEventListener('DOMContentLoaded', function() {
+        renderProjects('projects-grid', projects);
+      });
+    </script>
   </body>
 </html>
