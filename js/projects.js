@@ -27,6 +27,13 @@ const projects = [
     tech: "JavaScript",
     image: "./images/tic-tac-toe.png",
     github: "https://github.com/Jyoti-Adhikari/tic-tac-toe"
+  },
+  {
+    id: 5,
+    title: "JZ Driving",
+    tech: "MongoDB + Node.js + Express.js",
+    image: "./images/jz.png",
+    github: "https://github.com/Jyoti-Adhikari/jz_driving"
   }
   // Add more projects here - just update this array!
 ];
